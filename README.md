@@ -50,3 +50,8 @@ docker-compose exec web python manage.py createsuperuser --settings=app.settings
 
 You should now be able to log into the backend using those credentials at [http://localhost:8000/admin/](http://localhost:8000/admin/).
 
+## Commands
+- `docker-compose up -d --build` - Build and start containers in the background.
+- `docker-compose down` - Stop running containers.
+- `docker-compose exec web python manage.py makemigrations` - Make migration files.
+- `docker-compose exec web python manage.py migrate` - Run migrations.

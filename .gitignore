@@ -2,12 +2,6 @@
 .env.dev
 .env.dev.db
 
-# Django migrations that are generated on build
-**/migrations/*_temp_*.py
-**/migrations/*_auto_*.py
-**/migrations/*_merge_*.py
-**/migrations/*_initial*.py
-
 # Logs
 logs
 *.log

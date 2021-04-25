@@ -61,7 +61,7 @@ You should now be able to log into the backend using those credentials at [http:
 ### Page models
 This is where you can define what stream fields you want to be accessible to each page by the editor.
 
-[ EG. `app/home` ]
+[ EG. `app/pages/home` ]
 
 ### Page components
 These are the custom blocks that can be added to any page model. Each page component folder has a model that defines it's fields as well as a template that creates the markup for the component.

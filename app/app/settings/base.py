@@ -24,7 +24,8 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
-    "home",
+    "pages.home",
+    "pages.about",
     "search",
     "wagtail.contrib.forms",
     "wagtail.contrib.modeladmin",
@@ -67,6 +68,7 @@ TEMPLATES = [
         "DIRS": [
             os.path.join(PROJECT_DIR, "templates"),
             os.path.join(PROJECT_DIR, "page_components"),
+            os.path.join(PROJECT_DIR, "pages"),
         ],
         "APP_DIRS": True,
         "OPTIONS": {

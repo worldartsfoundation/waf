@@ -63,6 +63,13 @@ This is where you can define what stream fields you want to be accessible to eac
 
 [ EG. `app/pages/home` ]
 
+#### Creating a new page model
+Page models are actually Django apps, so there are a few steps to creating and wireing them up within the CMS.
+- First, create the new app by running this command from the rood directory: `docker-compose exec web python manage.py startapp <yourpagename>`
+- Then move it into the pages directory: `mv <yourpagename> pages/`
+- Then add it to the `INSTALLED_APPS` array in `base.py`.
+- Finally make and run migrations. 
+
 ### Page components
 These are the custom blocks that can be added to any page model. Each page component folder has a model that defines it's fields as well as a template that creates the markup for the component.
 

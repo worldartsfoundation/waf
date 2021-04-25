@@ -1,0 +1,18 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div class="custom-template-class">
+    This is the person template...
+    {% if value.first_name %}
+        <p>
+            First Name:         
+            {{ value.first_name }}
+        </p>
+    {% endif %}
+
+    {% if value.surname %}
+        <p>
+            Surame:         
+            {{ value.surname }}
+        </p>
+    {% endif %}
+</div>

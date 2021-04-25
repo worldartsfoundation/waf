@@ -4,5 +4,6 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-    {{ page.body|richtext }}
+    {% include_block page.body %}
+    {% include_block page.bio %}
 {% endblock %}

@@ -1,18 +1,12 @@
 {% load wagtailcore_tags wagtailimages_tags %}
 
-<div class="custom-template-class">
-    This is the person template...
+<div 
+    class="person-block-js" 
     {% if value.first_name %}
-        <p>
-            First Name:         
-            {{ value.first_name }}
-        </p>
+        data-first-name="{{ value.first_name }}" 
     {% endif %}
-
     {% if value.surname %}
-        <p>
-            Surame:         
-            {{ value.surname }}
-        </p>
+        data-last-name="{{ value.surname }}"
     {% endif %}
+>
 </div>

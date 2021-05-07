@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 
 const PersonBlock = (props) => {
-    console.log(props);
     const { firstName, lastName } = props;
 
     if (props.componentEl) {

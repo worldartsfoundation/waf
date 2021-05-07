@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import PersonBlock from '../../app/page_components/person_block/person_block';
-console.log('loading from src app.js');
+import TextWithMediaBlock from '../../app/page_components/text_with_media_block/text_with_media_block';
 
-const components = [{ selector: 'person-block-js', callback: PersonBlock }];
+const components = [
+    { selector: 'person-block-js', callback: PersonBlock },
+    { selector: 'text-with-media-block-js', callback: TextWithMediaBlock }
+];
 
 components.map(function (component) {
     // Run this block for each instance of the selector found.

@@ -29581,7 +29581,6 @@ var _reactDom = require("react-dom");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var PersonBlock = function PersonBlock(props) {
-  console.log(props);
   var firstName = props.firstName,
       lastName = props.lastName;
 
@@ -29595,6 +29594,42 @@ var PersonBlock = function PersonBlock(props) {
 
 var _default = PersonBlock;
 exports.default = _default;
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js"}],"../../app/page_components/text_with_media_block/text_with_media_block.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = require("react-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var TextWithMediaBlock = function TextWithMediaBlock(props) {
+  var text = props.text,
+      media = props.media;
+
+  if (props.componentEl) {
+    (0, _reactDom.render)( /*#__PURE__*/_react.default.createElement("div", {
+      className: "c02__wrapper"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "c02__text",
+      dangerouslySetInnerHTML: {
+        __html: text
+      }
+    }), /*#__PURE__*/_react.default.createElement("img", {
+      className: "c02__image",
+      src: media
+    })), props.componentEl // Selector to mount the component to.
+    );
+  }
+};
+
+var _default = TextWithMediaBlock;
+exports.default = _default;
 },{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
@@ -29604,6 +29639,8 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _person_block = _interopRequireDefault(require("../../app/page_components/person_block/person_block"));
 
+var _text_with_media_block = _interopRequireDefault(require("../../app/page_components/text_with_media_block/text_with_media_block"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
@@ -29612,10 +29649,12 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-console.log('loading from src app.js');
 var components = [{
   selector: 'person-block-js',
   callback: _person_block.default
+}, {
+  selector: 'text-with-media-block-js',
+  callback: _text_with_media_block.default
 }];
 components.map(function (component) {
   // Run this block for each instance of the selector found.
@@ -29628,7 +29667,7 @@ components.map(function (component) {
     component.callback(props);
   });
 });
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","../../app/page_components/person_block/person_block":"../../app/page_components/person_block/person_block.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","../../app/page_components/person_block/person_block":"../../app/page_components/person_block/person_block.js","../../app/page_components/text_with_media_block/text_with_media_block":"../../app/page_components/text_with_media_block/text_with_media_block.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29656,7 +29695,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63401" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52695" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

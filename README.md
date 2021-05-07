@@ -55,6 +55,7 @@ You should now be able to log into the backend using those credentials at [http:
 - `docker-compose down` - Stop running containers.
 - `docker-compose exec web python manage.py makemigrations` - Make migration files.
 - `docker-compose exec web python manage.py migrate` - Run migrations.
+- `npm run watch` - Watch js / scss files for changes.
 
 ## Application structure
 
@@ -74,4 +75,11 @@ Page models are actually Django apps, so there are a few steps to creating and w
 These are the custom blocks that can be added to any page model. Each page component folder has a model that defines it's fields as well as a template that creates the markup for the component.
 
 [ EG. `app/page_components/person_block` ]
+
+This structure contains:
+- A model (component_name.py)
+- A template file (component_name.html)
+- A react component (component_name.js)
+
+After creating these files for a new component you must also import the component and add it to the array of components in `app/src/js/app.js`.
 

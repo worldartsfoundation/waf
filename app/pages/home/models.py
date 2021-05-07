@@ -8,6 +8,7 @@ from wagtail.core import blocks
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.images.blocks import ImageChooserBlock
 from app.page_components.person_block import person_block
+from app.page_components.text_with_media_block import text_with_media_block
 
 
 class HomePage(Page):
@@ -17,6 +18,7 @@ class HomePage(Page):
             ("paragraph", blocks.RichTextBlock()),
             ("image", ImageChooserBlock()),
             ("person", person_block.Person()),
+            ("text_with_media", text_with_media_block.TextWithMedia()),
         ]
     )
 

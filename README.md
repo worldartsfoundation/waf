@@ -83,3 +83,5 @@ This structure contains:
 
 After creating these files for a new component you must also import the component and add it to the array of components in `app/src/js/app.js`.
 
+### Front-end tooling
+By running `npm run watch`, Parcel will listen for changes in `app/src/js/app.js` and `app/src/scss/app.scss`, and compile them to the static folder where for serving to the template. So treat those two files as entrypoints for all js and scss modules to be loaded from.

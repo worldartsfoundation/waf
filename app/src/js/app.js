@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import PersonBlock from '../../app/page_components/person_block/person_block';
 import TextWithMediaBlock from '../../app/page_components/text_with_media_block/text_with_media_block';
+import '../scss/app.scss';
 
 const components = [
     { selector: 'person-block-js', callback: PersonBlock },

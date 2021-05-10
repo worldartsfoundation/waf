@@ -29614,16 +29614,18 @@ var TextWithMediaBlock = function TextWithMediaBlock(props) {
 
   if (props.componentEl) {
     (0, _reactDom.render)( /*#__PURE__*/_react.default.createElement("div", {
-      className: "c02__wrapper"
+      className: "twm__wrapper"
     }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "c02__text",
+      className: "twm__text",
       dangerouslySetInnerHTML: {
         __html: text
       }
-    }), /*#__PURE__*/_react.default.createElement("img", {
-      className: "c02__image",
+    }), /*#__PURE__*/_react.default.createElement("div", {
+      className: "twm__media-wraper"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      className: "twm__image",
       src: media
-    })), props.componentEl // Selector to mount the component to.
+    }))), props.componentEl // Selector to mount the component to.
     );
   }
 };

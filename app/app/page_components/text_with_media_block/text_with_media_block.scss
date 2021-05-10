@@ -1,0 +1,20 @@
+.twm__wrapper {
+    width: 100%;
+    display: flex;   
+    justify-content: space-between; 
+}
+
+.twm__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 41.66%; // 5 columns.
+}
+
+.twm__media-wraper {
+    width: 50%;
+}
+
+.twm__image {
+    width: 100%;
+}

@@ -6,9 +6,11 @@ const TextWithMediaBlock = (props) => {
 
     if (props.componentEl) {
         render(
-            <div className="c02__wrapper">
-                <div className="c02__text" dangerouslySetInnerHTML={{ __html: text }}></div>
-                <img className="c02__image" src={media} />
+            <div className="twm__wrapper">
+                <div className="twm__text" dangerouslySetInnerHTML={{ __html: text }}></div>
+                <div className="twm__media-wraper" >
+                    <img className="twm__image" src={media} />
+                </div>
 
             </div>,
             props.componentEl // Selector to mount the component to.

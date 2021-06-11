@@ -1,0 +1,12 @@
+.page-wrapper {
+    &.--is-dark {
+        background: $black-1;
+        color: $white-1;
+    }
+}
+
+.global-container {
+    width: 100%;
+    max-width: $content-width;
+    padding: 0 120px;
+}

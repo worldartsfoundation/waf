@@ -1,0 +1,68 @@
+.global-nav {
+    position: absolute;
+    width: 100%;
+    padding: 37px 46px;
+    display: flex;
+    justify-content: space-between;
+
+    &.--is-light {
+        color: $black-1;
+        border-bottom: solid 1px $black-1;
+
+        .global-nav__links li a.--is-active:after {
+            background: $black-1;
+        }
+    }
+
+    &.--is-dark {
+        color: $white-1;
+        border-bottom: solid 1px $white-1;
+
+        .global-nav__links li a.--is-active:after {
+            background: $white-1;
+        }
+    }
+}
+
+.global-nav__home-link {
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.global-nav__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;  
+    
+    li {
+        margin-right: 30px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        a {
+            position: relative;
+
+            &.--is-active {
+                font-weight: 700;
+
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: 24px;
+                    position: absolute;
+                    bottom: -35px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+
+.global-nav__donate-link {
+    font-weight: 700;
+    margin-left: 30px;
+}

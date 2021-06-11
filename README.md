@@ -1,24 +1,15 @@
-# README
+# WORLD ARTS FOUNDATION INC
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This site is built with Ruby on Rails, and a React front-end using the `webpacker` gem to bundle and compile js files. 
 
-Things you may want to cover:
+### Routes
+Routes are handled as a SPA by react-router in the file: `app/javascript/routes/Index.jsx`
 
-* Ruby version
+### Page Templates
+Page templates are jsx components that are hydrated with data from the API at: `app/controllers/api/v1/`
 
-* System dependencies
+### Database
+This app is using a postgres database locally and in production.
+To create a local database you can run `rails db:create`, and then seed it with data using `rails db:seed`.
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
